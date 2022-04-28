@@ -1,0 +1,158 @@
+{
+  "name": "ebremner17/cuba-recommended-project",
+  "description": "Project template for Drupal 9",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/drupal",
+  "support": {
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "lullabot/entity_browser_block_layout": {
+      "type": "vcs",
+      "url": "https://github.com/lullabot/entity_browser_block_layout.git",
+      "no-api": true
+    },
+    "ebremner17/cuba_base_profile": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_base_profile.git"
+    },
+    "ebremner17/cuba_theme": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_theme.git"
+    },
+    "ebremner17/cuba_ct_board_of_directors": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_ct_board_of_directors.git"
+    },
+    "ebremner17/cuba_common_configuration": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_common_configuration.git"
+    },
+    "ebremner17/cuba_ct_conference_section": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_ct_conference_section.git"
+    },
+    "ebremner17/cuba_ct_speaker": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_ct_speaker.git"
+    },
+    "ebremner17/cuba_media": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_media.git"
+    },
+    "ebremner17/cuba_paragraphs": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_paragraphs.git"
+    },
+    "ebremner17/cuba_ct_web_page": {
+      "type": "vcs",
+      "url": "https://github.com/ebremner17/cuba_ct_web_page.git"
+    }
+  },
+  "conflict": {
+    "drupal/drupal": "*",
+    "drupal-custom-module/drupal-custom-module": "*",
+    "drupal-custom-theme/drupal-custom-theme": "*"
+  },
+  "require": {
+    "composer/installers": "^1.9",
+    "cweagans/composer-patches": "^1.7",
+    "drupal/better_exposed_filters": "5.x-dev",
+    "drupal/config_update": "1.7",
+    "drupal/core-composer-scaffold": "9.0.8",
+    "drupal/core-project-message": "9.0.8",
+    "drupal/core-recommended": "9.0.8",
+    "drupal/dashboards": "1.0-beta10",
+    "drupal/devel": "4.0.0",
+    "drupal/draggableviews": "2.0.0",
+    "drupal/editor_file": "1.5",
+    "drupal/features": "3.11",
+    "drupal/jquery_ui": "1.4",
+    "drupal/jquery_ui_datepicker": "1.0",
+    "drupal/jquery_ui_slider": "1.1",
+    "drupal/jquery_ui_touch_punch": "1.0.0",
+    "drupal/inline_entity_form": "1.0-rc7",
+    "drupal/language_switcher_extended": "1.0-beta3",
+    "drupal/layout_paragraphs": "1.0.0-beta3",
+    "drupal/menu_admin_per_menu": "1.3",
+    "drupal/menu_force": "1.2",
+    "drupal/pathauto": "1.8",
+    "drupal/publishcontent": "1.2",
+    "drupal/redirect_after_login": "2.6",
+    "drupal/role_delegation": "1.1",
+    "drupal/sitemap": "2.0-beta2",
+    "drupal/superfish": "1.4",
+    "drupal/taxonomy_menu": "dev-3.x",
+    "drupal/twig_field_value": "2.0.0",
+    "drupal/twig_tweak": "3.0.0-rc2",
+    "drupal/views_bulk_operations": "3.9",
+    "drupal/we_megamenu": "1.11",
+    "ebremner17/cuba_base_profile": "dev-1.x-dev",
+    "ebremner17/cuba_ct_board_of_directors": "dev-1.x-dev",
+    "ebremner17/cuba_common_configuration": "dev-1.x-dev",
+    "ebremner17/cuba_ct_conference_section": "dev-1.x-dev",
+    "ebremner17/cuba_ct_speaker": "dev-1.x-dev",
+    "ebremner17/cuba_ct_web_page": "dev-1.x-dev",
+    "ebremner17/cuba_media": "dev-1.x-dev",
+    "ebremner17/cuba_paragraphs": "dev-1.x-dev",
+    "ebremner17/cuba_theme": "1.x-dev",
+    "lullabot/entity_browser_block_layout": "master",
+    "oomphinc/composer-installers-extender": "2.0.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "discard-changes": true,
+    "secure-http": false,
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "composer/installers": true,
+      "oomphinc/composer-installers-extender": true
+    }
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-types": [
+      "drupal",
+      "drupal-custom-module"
+    ],
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/profiles/cuba_base_profile/modules/features/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/profiles/cuba_base_profile/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/cuba_base_profile/themes/{$name}": [
+        "type:drupal-custom-theme"
+      ],
+      "web/profiles/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ]
+    },
+    "patches": {
+      "drupal/draggableviews": {
+        "Sort handler specify order view": "https://www.drupal.org/files/issues/2020-10-07/draggableviews-sort_handler_specify_order_view-2767437-78.patch"
+      }
+    }
+  }
+}
